@@ -114,6 +114,9 @@ button{
     background-position: center;
     background-size: cover;
     transition: transform 0.5s;
+    margin-left: 20px;
+    margin-top:20px;
+
 
 }
 
@@ -135,8 +138,8 @@ button{
 }
 
 h4{
-    color: rgb(168, 168, 168);
-    text-shadow: 0 0 5px rgb(72, 89, 167)9;
+    color: rgb(58, 55, 55);
+    text-shadow: 0 0 5px rgb(193, 198, 220)9;
     font-size: 20px;
 }
 footer{
