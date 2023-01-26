@@ -1,84 +1,105 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylenews.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <title>Stock Market News</title>
+  <title>STOCK MARKET</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <style>
-        body{
-            margin:0px !important;
-            padding: 0vh 2vh 2vh 2vh !important;
+         article {
+            width: 90%;
+            border: 2px solid rgb(5, 25, 102);
+            padding: 10px;
+            border-radius: 10px;
+            margin: 0 auto;
         }
-        .navbar {
-            margin-left: 0px;
-            width: 100%;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(to bottom, white, #dddddd);
-        }
+  
+      
+        body{  
+   background-image: url('photos/bc1.jpg');
+     background-size: cover;
+     background-attachment: fixed;  
+     color:#fff;
+   }
+       
+   footer{
+  position: absolute;
+   background-color: rgb(0, 0, 0);
+    height: 200px;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top:30px;
+    color: #f2f2f2;}
+   
+    .footer-content{
+      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;}
+   
+    .footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 4000;
 
-        .navbar .logo {
-            font-size: 20px;
-            font-weight: 900px;
-            margin: 0 20px;
-        }
+    text-transform: capitalize;
+    }
+   
+    .footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;}
+   
+    .socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;}
+   
+    .socials li{
+    margin: 0 10px;}
+   
+    .socials a{
+    text-decoration: none;
+    color: #fff;}
 
-        .icon-bar {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .icon-bar a {
-            text-align: center;
-            padding: 20px 30px;
-            font-size: 25px;
-            color: black;
-        }
-
-        .menu-items {
-            font-size: large;
-            color: black;
-            padding: 5px;
-        }
-
-        .icon-bar a:hover {
-            background-color: snow;
-            color: black;
-        }
-
-        .title-heading {
-            font-size: 25px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            color: darkblue;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Poppins", sans-serif;
-            min-height: 100vh;
-            max-width: 100vw;
-            line-height: 1.4;
-            padding: 20px 40px;
-            background-color: #dddddd;
-        }
-
-        .container {
-            max-width: 1200px;
-        }
-
-        .heading-1 {
+    .socials a i{
+    font-size: 2.1rem;
+    transition: color .4s ease;}
+   
+    .socials a:hover i{
+    color: rgb(55, 140, 135);}
+   
+    .footer-bottom{
+    background: #000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;}
+   
+   
+    .footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;}
+   
+    .footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;}
+    .heading-1 {
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 40px;
             text-transform: uppercase;
@@ -99,7 +120,6 @@
             color: crimson;
             margin-bottom: 10px;
         }
-
         .sub-heading {
             font-size: 20px;
             display: flex;
@@ -127,293 +147,45 @@
             text-transform: uppercase;
             font-weight: 300;
         }
-
-        /*HOME*/
-        .home {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-        }
-
-        .home-img {
-            width: 100%;
-        }
-
-        .list {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .list img {
-            width: 100%;
-            height: 80px;
-        }
-
-        /*ARTICLE*/
-        .article>p {
-            font-size: 20px;
-            margin-bottom: 20px;
-
-            columns: 3 25inch;
-            column-gap: 40px;
-            hyphens: auto;
-        }
-
-        article p:first-child:first-line {
-            font-weight: 700;
-            font-size: 25px;
-        }
-
-        /*BLOCKQUOTE*/
-        blockquote {
-            font-size: 20px;
-            padding: 10px 30px;
-            margin-bottom: 40px;
-            position: relative;
-            outline: 3px solid blue;
-            outline-offset: 1px;
-        }
-
-        blockquote::before {
-            content: open-quote;
-            position: absolute;
-            top: -48px;
-            left: -4px;
-            opacity: .3;
-            color: #666;
-            font-size: 150px;
-        }
-
-        .cards {
-            columns: 25ch 3;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .card {
-            font-size: 20px;
-            border: 1px solid;
-            padding: 10px 20px;
-            break-inside: avoid;
-        }
-
-        @media (max-width:950px) {
-            .home {
-                grid-template-columns: 1fr;
-            }
-
-            .lists {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-            }
-
-            .list {
-                grid-template-columns: 1fr 5fr;
-            }
-
-            .card {
-                margin-bottom: 40px;
-            }
-        }
-
-        @media (max-width: 650px) {
-            .lists {
-                grid-template-columns: 1fr;
-            }
-        }
-
-
-        footer {
-            margin-left: -40px;
-            /*margin-right: -90px;*/
-            position: absolute;
-            background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
-            height: auto;
-            width: 100%;
-            font-family: "Open Sans";
-            padding-top: 40px;
-            color: #fff;
-        }
-
-        .footer-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .footer-content h3 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            text-transform: capitalize;
-            line-height: 3rem;
-        }
-
-        .footer-content p {
-            max-width: 500px;
-            margin: 10px auto;
-            line-height: 28px;
-            font-size: 14px;
-        }
-
-        .socials {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 1rem 0 3rem 0;
-        }
-
-        .socials li {
-            margin: 0 10px;
-        }
-
-        .socials a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .socials a i {
-            font-size: 1.1rem;
-            transition: color .4s ease;
-        }
-
-        .socials a:hover i {
-            color: aqua;
-        }
-
-        .footer-bottom {
-            background: #000;
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-
-        .footer-bottom p {
-            font-size: 14px;
-            word-spacing: 2px;
-            text-transform: capitalize;
-        }
-
-        .footer-bottom span {
-            text-transform: uppercase;
-            opacity: .4;
-            font-weight: 200;
-        }
-        #hide{
-            width: 180px;
-             color:rgb(1, 39, 75);
-             font-size: 15px;
-             font-weight: bold;
-             padding: 12px 0;
-             background: rgb(248, 247, 244);
-             border:0;
-             border-radius: 20px;
-             outline: none;
-             margin-top: 30px;
-             cursor: pointer;
-            }
-            #show{
-            width: 180px;
-             color:rgb(1, 35,75);
-             font-size: 15px;
-             font-weight: bold;
-             padding: 12px 0;
-             background: rgb(248, 247, 244);
-             border:0;
-             border-radius: 20px;
-             outline: none;
-             margin-top: 30px;
-             cursor: pointer;
-            }
-            .container{
-                margin: 0vh 10vw;
-            }
-            .article__header {
-                grid-column: auto/span 8;
-            }
-            .article__body img {
-                height: auto;
-                margin-bottom: 0;
-                max-width: 100%;
-            }
-            footer {
-    position: absolute;
-    background: black !important;
-    height: auto;
-    width: 100%;
-    font-family: "Open Sans";
-    padding-top: 40px;
-    color: #fff;
-}
-
-            </style>
-            </head>
+      </style></head>
 
 <body>
-    <div class='navbar'>
-        <div class='logo'>
-
-            <h1 class="title-heading">STOCK MARKET</h1>
-
-        </div>
-        <div class='icon-bar'>
-            <a href="home.html"><i class="fas fa-home">
-                    <div class="menu-items">
-                        Home
-
-                    </div>
-                </i>
-            </a>
-            <a href="news.html"><i class="fas fa-mail-bulk">
-                    <div class="menu-items">
-                        Market News
-
-                    </div>
-                </i>
-            </a>
-            <a href="invest.html"><i class="fas fa-business-time">
-                    <div class="menu-items">
-                        Invest
-
-                    </div>
-                </i>
-            </a>
-            <a href="loginform.html"><i class="fas fa-user-plus">
-                    <div class="menu-items">
-                        Log In
-
-                    </div>
-                </i>
-            </a>
-            <a href="index.html"><i class="fas fa-info">
-                    <div class="menu-items">
-                        About Us
-
-                    </div>
-                </i>
-            </a>
-           
-
-
-        </div>
-
+   
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="home.html">Stock Market</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li ><a href="home.html"><i style="font-size: 1.8rem;"class="fas fa-home">Home</i></a></li>
+        <li class="active" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="news.html"><i style="font-size: 1.8rem;"class="fas fa-mail-bulk">Market news </i><span class="caret"></span></a>
+         
+          
+           <ul class="dropdown-menu">
+            <li class="active"><a href="news.html">News</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="tutorials.html">Tutorials</a></li>
+            
+          </ul>
+        </li>
+       
+        <li><a href="invest.html"><i style="font-size: 1.8rem;" class="fas fa-business-time">Invest</i></a></li>
+        <li><a href="index.html"><i style="font-size: 1.8rem;"class="fas fa-info"> About us</i></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="loginform.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       
+      </ul>
     </div>
-
+  </nav>
 
     <div class="container">
         <header>
 
             <h1 class="heading-1" id="demo2"></h1>
-
-
-            <script>
-                // Create an object:
+<script>
+                // Krijimi i objektit
                 const person = {
                     firstWord: "Market",
                     secondWord: "News",
@@ -431,218 +203,150 @@
                 <script>
                     let x = 3 + " " + "December" + " " + 2022;
                     document.getElementById("demo3").innerHTML = x;
-                </script>
+                </script> </div></header>
 
 
-                
-            </div>
-        </header>
-        <article class="article__body">
-            <header class="article__header">
-            <h1 class="article__header__heading" itemprop="headline">
-            Global Cryptocurrency Trade Volumes Saw a Significant Decline in December 2022 </h1>
-            </header>
+        
+  <article >
+    <img src="photos/trending.jpg"alt="" width="100%" height="400" />
 
-            <div class="featured_image_container">
-            <img width="1280" height="650" src="https://static.news.bitcoin.com/wp-content/uploads/2023/01/hopyyyuuu.jpg" class="story__img article__poster" alt="" decoding="async" loading="lazy" srcset="https://static.news.bitcoin.com/wp-content/uploads/2023/01/hopyyyuuu-300x169.jpg 300w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/hopyyyuuu-1024x576.jpg 1024w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/hopyyyuuu-768x432.jpg 768w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/hopyyyuuu-190x107.jpg 190w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/hopyyyuuu-380x214.jpg 380w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/hopyyyuuu-760x428.jpg 760w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/hopyyyuuu.jpg 1280w" sizes="(max-width: 1280px) 100vw, 1280px">
-            </div>
+    <a href="article.html" ><h1 style="color:blue; font-size:xx-large;">R&D: A long-term investment</h1></a> 
 
-             <p><strong>According to statistics, daily cryptocurrency trade volumes have dropped significantly during Dec. 2022. On Jan. 1, data shows that $22.95 billion was traded in the last 24 hours, compared to double that amount, $54.78 billion, two weeks earlier. On November 8, 2022, 54 days prior, amid the FTX collapse, global cryptocurrency trade volumes were approximately $115.33 billion.</strong></p>
-            <br>
-            <h2>Crypto Trade Volumes End 2022 46% Lower Than the Month Prior</h2>
+<p>See why long term investment strategies should factor in research and development.
+     A company's R&D strategy may lead to durability and better returns...</p></article><br>
 
-            <p>Cryptocurrency trade volumes worldwide have significantly declined since the beginning of the year. 
-                For example, on Jan. 2, 2022, one year ago, the global trade volume for the 24-hour period was approximately 
-                <a href="https://web.archive.org/web/20220102125645/https://www.coingecko.com/en" target="_blank">$70.48 billion</a>,
-                 according to archived coingecko.com statistics. 
-                 Today’s 24-hour volume worldwide is 67.43% less at <a href="https://www.coingecko.com/" target="_blank">$22.95 billion</a>.
-                  In addition, 71.63% of all trades on Jan. 1, 2023, were paired with the cryptocurrency economy’s stablecoins.</p>
+<h2>Stocks fall to end Wall Street’s worst year since 2008, S&P 500 finishes 2022 down nearly 20%</h2>
+<p>Stocks slipped on Friday to end a brutal 2022 with a whimper, as Wall Street wrapped up its worst year since 2008 on a sour note.
+The Dow Jones Industrial Average slid 73.55 points, or 0.22%, to close at 33,147.25. The S&P 500 shed 0.25% to end at 3,839.50. 
+    The Nasdaq Composite ticked down 0.11% to 10,466.88.
 
-            <p>While all the stablecoins today represent <a href="https://www.coingecko.com/en/categories/stablecoins" target="_blank">$16.44 billion</a> 
-                in trade volume, tether (<a class="lar-automated-link" href="https://markets.bitcoin.com/crypto/USDT" 312012="" target="_blank">USDT</a>) 
-                commands $12.45 billion, which equates to 71.63% of the aggregate on Jan. 1, 2023.
-                 Two weeks ago on Dec. 15, the global trade volume was <a href="https://web.archive.org/web/20221215051021/https://www.coingecko.com/" target="_blank">$54.78 billion</a>
-                  and a good majority of those trades were in stablecoins as well.
-                   Cryptocurrency trade volumes have been declining since Jan. 2022, with monthly spikes in May, September, and November 2022.</p>
+    <img src="photos/stock1.jpg" width="80%" height="400px;" style="margin-left: 100px;"/><br>
+    Friday marked the final day of trading in what has been a painful year for stocks. All three of the major averages suffered their worst
+     year since 2008 and snapped a three-year win streak.
+      The S&P 500 sank 19.4%, and is more than 20% below its record high,
+      while the tech-heavy Nasdaq tumbled 33.1%<br>
+      <cite>
+Sticky inflation and aggressive rate hikes from the Federal Reserve battered growth and technology stocks 
+and weighed on investor sentiment throughout the year. Geopolitical concerns and volatile economic data also kept markets on edge.
+“We’ve had everything from Covid problems in China to the invasion of Ukraine. They’ve all been very serious. But for investors, 
+it is what the Fed is doing,” said Art Cashin, director of floor operations for UBS, on CNBC’s “The Exchange.”
+</cite>
+</p>
 
-            <p><img decoding="async" loading="lazy" class="size-full wp-image-566750 aligncenter" 
-                src="https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly.png"
-                 alt="" width="2401" height="1260" srcset="https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-300x157.png 300w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-1024x537.png 1024w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-768x403.png 768w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-1536x806.png 1536w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-2048x1075.png 2048w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly.png 2401w" sizes="(max-width: 2401px) 100vw, 2401px"></p>
-            
-                 <p>The November spike occurred amid the chaos surrounding FTX’s insolvency, and there were significantly higher daily trade volumes at that time. 
-                    Data from The Block’s crypto exchange volume (<a href="https://www.theblock.co/data/crypto-markets/spot/cryptocurrency-exchange-volume-monthly" target="_blank">legitimate index</a>) 
-                    shows that Oct. 2022 had $543.67 billion in volume, while Nov. 2022 saw an increase of approximately 23.79% to $673.01 billion.
-                     Now that Dec. 2022 is over, statistics show that Dec. 2022’s total volumes were around $357.48 billion, 
-                     or 46.88% lower than the previous month.</p>
-            <br>
-            <br>
-            
-                  
-                  
-                
+<br>
+            <h1 style="margin-left:40px; color:rgb(66, 116, 177);">But how does this actually work? </h1>
+            <p style="margin-left:40px;">Video of 
+                <a href="https://www.youtube.com/channel/UCejoTyCljURHcX7wdkXGRXA" target="_blank">Faares Q</a>.</p>
 
-<div style="text-align:center"> 
+            <div style="text-align:center"> 
  
-  <video id="video1" width="1200"  >
-    <source src="Investt.mp4" type="video/mp4">
-    <source src="Investt.mp4" type="video/ogg">
-    Your browser does not support HTML video.
-  </video>
-  <br>
-  <button onclick="playPause()" style="color:white;background:local; background-color:rgb(35, 71, 103);"><b>Play/Pause</b></button> 
-  <button onclick="makeBig()"  style="color:white;background:local; background-color:rgb(35, 71, 103);"><b>Big</b></button>
-  <button onclick="makeSmall()" style="color:white;background:local; background-color:rgb(35, 71, 103);"><b>Small</b></button>
-  <button onclick="makeNormal()" style="color:white;background:local; background-color:rgb(35, 71, 103);"><b>Normal</b></button>
+                <video id="video1" width="1000"  >
+                  <source src="Investt.mp4" type="video/mp4">
+                  Your browser does not support HTML video.
+                </video>
+                <br>
+                <button onclick="playPause()" style="color:white;background:local; background-color:rgb(35, 71, 103);"><b>Play/Pause</b></button> 
+                <button onclick="makeBig()"  style="color:white;background:local; background-color:rgb(35, 71, 103);"><b>Big</b></button>
+                <button onclick="makeSmall()" style="color:white;background:local; background-color:rgb(35, 71, 103);"><b>Small</b></button>
+                <button onclick="makeNormal()" style="color:white;background:local; background-color:rgb(35, 71, 103);"><b>Normal</b></button>
+                
+              </div> 
+              
+              <script> 
+              var myVideo = document.getElementById("video1"); 
+              
+              function playPause() { 
+                if (myVideo.paused) 
+                  myVideo.play(); 
+                else 
+                  myVideo.pause(); 
+              } 
+              
+              function makeBig() { 
+                  myVideo.width = 1220; 
+              } 
+              
+              function makeSmall() { 
+                  myVideo.width = 320; 
+              } 
+              
+              function makeNormal() { 
+                  myVideo.width = 1000; 
+              } 
+              </script> 
+            <br>
+              <br>
+
+
+              <h2>Crypto Trade Volumes End 2022 46% Lower Than the Month Prior</h2>
+
+              <p>Cryptocurrency trade volumes worldwide have significantly declined since the beginning of the year. 
+                  For example, on Jan. 2, 2022, one year ago, the global trade volume for the 24-hour period was approximately 
+                  <a href="https://web.archive.org/web/20220102125645/https://www.coingecko.com/en" target="_blank">$70.48 billion</a>,
+                   according to archived coingecko.com statistics. 
+                   Today’s 24-hour volume worldwide is 67.43% less at <a href="https://www.coingecko.com/" target="_self">$22.95 billion</a>.
+                    In addition, 71.63% of all trades on Jan. 1, 2023, were paired with the cryptocurrency economy’s stablecoins.</p>
   
-</div> 
+              <p>While all the stablecoins today represent <a href="https://www.coingecko.com/en/categories/stablecoins" target="_blank">$16.44 billion</a> 
+in trade volume, tether (<a class="lar-automated-link" href="https://markets.bitcoin.com/crypto/USDT" 312012="" target="_blank">USDT</a>) 
+commands $12.45 billion, which equates to 71.63% of the aggregate on Jan. 1, 2023.
+ Two weeks ago on Dec. 15, the global trade volume was <a href="https://web.archive.org/web/20221215051021/https://www.coingecko.com/" target="_blank">
+    $54.78 billion</a>
+    and a good majority of those trades were in stablecoins as well.
+    Cryptocurrency trade volumes have been declining since Jan. 2022, with monthly spikes in May, September, and November 2022.</p>
+  
 
-<script> 
-var myVideo = document.getElementById("video1"); 
-
-function playPause() { 
-  if (myVideo.paused) 
-    myVideo.play(); 
-  else 
-    myVideo.pause(); 
-} 
-
-function makeBig() { 
-    myVideo.width = 560; 
-} 
-
-function makeSmall() { 
-    myVideo.width = 320; 
-} 
-
-function makeNormal() { 
-    myVideo.width = 420; 
-} 
-</script> 
-
-<p>Video of <a href="https://www.youtube.com/channel/UCejoTyCljURHcX7wdkXGRXA" target="_blank">Faares Q</a>.</p>
-
+<p><img src="https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly.png"
+ width="100%" height="400" srcset="https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-300x157.png 300w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-1024x537.png 1024w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-768x403.png 768w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-1536x806.png 1536w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-2048x1075.png 2048w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly.png 2401w" sizes="(max-width: 2401px) 100vw, 2401px"></p>
+                    
+<p>The November spike occurred amid the chaos surrounding FTX’s insolvency, and there were significantly higher daily trade volumes at that time. 
+ Data from The Block’s crypto exchange volume (<a href="https://www.theblock.co/data/crypto-markets/spot/cryptocurrency-exchange-volume-monthly" target="_blank">legitimate index</a>) 
+shows that Oct. 2022 had $543.67 billion in volume, while Nov. 2022 saw an increase of approximately 23.79% to $673.01 billion.
+ Now that Dec. 2022 is over, statistics show that Dec. 2022’s total volumes were around $357.48 billion,or 46.88% lower than the previous month.</p>
 <br>
-<br>
-
-
-            <p>The last time global cryptocurrency trade volumes were this low was two years ago in December 2020. At that time, global crypto trade volumes were 7.27% higher at $385.51 billion. Lower cryptocurrency trade volumes can have both positive and negative implications for investors.</p>
-            <p>On one hand, low trade volume is often seen as a sign of a lack of interest in the crypto market, which could potentially indicate lower values. On the other hand, low trade volume can sometimes be interpreted as a bullish sign for the cryptocurrency economy, as it may suggest limited selling pressure.</p>
-            <div class="article__body__tags-related__tags">
-            <h6 class="article__body__tags-related__title">
-            Tags in this story
-            </h6>
-            <div class="article__body__tags"><a href="https://news.bitcoin.com/tag/2022/" target="_self">2022</a>, <a href="https://news.bitcoin.com/tag/24-hours/" target="_self">24 hours</a>, <a href="https://news.bitcoin.com/tag/24-hour-period/" target="_self">24-hour period</a>, <a href="https://news.bitcoin.com/tag/aggregate/" target="_self">aggregate</a>, <a href="https://news.bitcoin.com/tag/bullish/" target="_self">Bullish</a>, <a href="https://news.bitcoin.com/tag/coingecko-com/" target="_self">coingecko.com</a>, <a href="https://news.bitcoin.com/tag/crypto/" target="_self">Crypto</a>, <a href="https://news.bitcoin.com/tag/crypto-exchange-volume/" target="_self">Crypto Exchange Volume</a>, <a href="https://news.bitcoin.com/tag/crypto-trade-volumes/" target="_self">crypto trade volumes</a>, <a href="https://news.bitcoin.com/tag/cryptocurrency/" target="_self">Cryptocurrency</a>, <a href="https://news.bitcoin.com/tag/cryptocurrency-trade-volumes/" target="_self">cryptocurrency trade volumes</a>, <a href="https://news.bitcoin.com/tag/daily-trade-volumes/" target="_self">daily trade volumes</a>, <a href="https://news.bitcoin.com/tag/data/" target="_self">data</a>, <a href="https://news.bitcoin.com/tag/december/" target="_self">December</a>, <a href="https://news.bitcoin.com/tag/december-2020/" target="_self">December 2020</a>, <a href="https://news.bitcoin.com/tag/decline/" target="_self">decline</a>, <a href="https://news.bitcoin.com/tag/ftx-insolvency/" target="_self">FTX insolvency</a>, <a href="https://news.bitcoin.com/tag/global/" target="_self">Global</a>, <a href="https://news.bitcoin.com/tag/implications/" target="_self">implications</a>, <a href="https://news.bitcoin.com/tag/investors/" target="_self">Investors</a>, <a href="https://news.bitcoin.com/tag/jan-1/" target="_self">Jan. 1</a>, <a href="https://news.bitcoin.com/tag/lack-of-interest/" target="_self">lack of interest</a>, <a href="https://news.bitcoin.com/tag/limited-selling-pressure/" target="_self">limited selling pressure</a>, <a href="https://news.bitcoin.com/tag/lower-values/" target="_self">lower values</a>, <a href="https://news.bitcoin.com/tag/may/" target="_self">May</a>, <a href="https://news.bitcoin.com/tag/monthly-spikes/" target="_self">monthly spikes</a>, <a href="https://news.bitcoin.com/tag/november/" target="_self">November</a>, <a href="https://news.bitcoin.com/tag/november-8/" target="_self">November 8</a>, <a href="https://news.bitcoin.com/tag/september/" target="_self">September</a>, <a href="https://news.bitcoin.com/tag/stablecoins/" target="_self">Stablecoins</a>, <a href="https://news.bitcoin.com/tag/tether/" target="_self">Tether</a>, <a href="https://news.bitcoin.com/tag/trade-volumes/" target="_self">Trade Volumes</a>, <a href="https://news.bitcoin.com/tag/usdt/" target="_self">USDT</a></div>
-            </div><p><em><strong>What do you think about the decline in crypto trade volumes during the last month of 2022? Let us know your thoughts about this subject in the comments section below.</strong></em></p>
-            <div class="article__body__author">
-            <div class="article__body__author__avatar">
-            <img src="https://static.news.bitcoin.com/wp-content/uploads/2018/04/2Khomers-150x150.jpg" srcset="https://static.news.bitcoin.com/wp-content/uploads/2018/04/2Khomers-150x150.jpg 1x, https://static.news.bitcoin.com/wp-content/uploads/2018/04/2Khomers-300x300.jpg 2x" class="avatar avatar-150 photo">
-            </div>
-            <div class="article__body__author__info">
-            <h6 class="article__body__author__info__name">
-            Jamie Redman </h6>
-            <p class="article__body__author__info__about">
-            Jamie Redman is the News Lead at Bitcoin.com News and a financial tech journalist living in Florida. Redman has been an active member of the cryptocurrency community since 2011. He has a passion for Bitcoin, open-source code, and decentralized applications. Since September 2015, Redman has written more than 6,000 articles for Bitcoin.com News about the disruptive protocols emerging today.<br>
-            <span class="td-social-icon-wrap">
-            <a target="_blank" href="https://twitter.com/jamieCrypto" title="Twitter">
-            <i class="td-icon-font td-icon-twitter"></i>
-            </a>
-            </span>
-            </p>
-            </div>
-            </div>
-            <div style="margin: 30px 0;">
-            <div id="om-bkfhqmloufgvvuw6ufkv-holder"></div>
-            </div>
-            <div class="exchange-widget"></div>
-            <div class="article__body__tags-related">
-            <div class="article__body__tags-related__related">
-            <div class="td_block_wrap td_block_story_medium td_uid_3_63b47cd00ad9b_rand td-pb-border-top td_block_template_1" data-td-block-uid="td_uid_3_63b47cd00ad9b"><script>var block_td_uid_3_63b47cd00ad9b = new tdBlock();
-            block_td_uid_3_63b47cd00ad9b.id = "td_uid_3_63b47cd00ad9b";
-            block_td_uid_3_63b47cd00ad9b.atts = '{"limit":"2","sort":"","post_ids":"567011,567005","tag_slug":"","autors_id":"","installed_post_types":"","category_id":"","category_ids":"","custom_title":"","custom_url":"","show_child_cat":"","sub_cat_ajax":"","ajax_pagination":"","header_color":"","header_text_color":"","ajax_pagination_infinite_stop":"","td_column_number":1,"td_ajax_preloading":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_filter_default_txt":"All","color_preset":"","border_top":"","class":"td_uid_3_63b47cd00ad9b_rand","el_class":"","offset":"","css":"","tdc_css":"","tdc_css_class":"td_uid_3_63b47cd00ad9b_rand","live_filter":"","live_filter_cur_post_id":"","live_filter_cur_post_author":"","block_template_id":""}';
-            block_td_uid_3_63b47cd00ad9b.td_column_number = "1";
-            block_td_uid_3_63b47cd00ad9b.block_type = "td_block_story_medium";
-            block_td_uid_3_63b47cd00ad9b.post_count = "2";
-            block_td_uid_3_63b47cd00ad9b.found_posts = "2";
-            block_td_uid_3_63b47cd00ad9b.header_color = "";
-            block_td_uid_3_63b47cd00ad9b.ajax_pagination_infinite_stop = "";
-            block_td_uid_3_63b47cd00ad9b.max_num_pages = "1";
-            tdBlocksArray.push(block_td_uid_3_63b47cd00ad9b);
-            </script><div class="td-block-title-wrap"></div><div id="td_uid_3_63b47cd00ad9b" class="td_block_inner td-column-1 td-opacity-author">
-            <div class="story story--medium">
-            <a href="https://news.bitcoin.com/declining-interest-leads-to-poor-market-performance-for-ethereum-proof-of-work-forks/" class="story--medium__img-container" target="_self">
-            <img width="760" height="428" src="https://static.news.bitcoin.com/wp-content/uploads/2023/01/etherssss-760x428.jpg" class="story__img story--medium__img wp-post-image" alt="Declining Interest Leads to Poor Market Performance for Ethereum Proof-of-Work Forks" decoding="async" loading="lazy" srcset="https://static.news.bitcoin.com/wp-content/uploads/2023/01/etherssss-300x169.jpg 300w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/etherssss-1024x576.jpg 1024w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/etherssss-768x432.jpg 768w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/etherssss-190x107.jpg 190w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/etherssss-380x214.jpg 380w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/etherssss-760x428.jpg 760w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/etherssss.jpg 1280w" sizes="(max-width: 760px) 100vw, 760px"> </a>
-            <div class="story--medium__info">
-            <a href="https://news.bitcoin.com/declining-interest-leads-to-poor-market-performance-for-ethereum-proof-of-work-forks/" target="_self">
-            <h6 class="story__title story--medium__title">
-            Declining Interest Leads to Poor Market Performance for Ethereum Proof-of-Work Forks </h6>
-            </a>
-            <div class="story__footer">
-            MARKET UPDATES | <span>1 hour ago<div class="tstamp" style="display: none;" data-ts="1672770626"></div></span> </div>
-            </div>
-            </div>
-            <div class="story story--medium">
-            <a href="https://news.bitcoin.com/biggest-movers-sol-surges-8-as-atom-nears-1-month-high/" class="story--medium__img-container" target="_self">
-            <img width="760" height="428" src="https://static.news.bitcoin.com/wp-content/uploads/2023/01/shutterstock_2120628902-760x428.jpg" class="story__img story--medium__img wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://static.news.bitcoin.com/wp-content/uploads/2023/01/shutterstock_2120628902-300x169.jpg 300w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/shutterstock_2120628902-1024x576.jpg 1024w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/shutterstock_2120628902-768x432.jpg 768w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/shutterstock_2120628902-190x107.jpg 190w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/shutterstock_2120628902-380x214.jpg 380w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/shutterstock_2120628902-760x428.jpg 760w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/shutterstock_2120628902.jpg 1280w" sizes="(max-width: 760px) 100vw, 760px"> </a>
-            <div class="story--medium__info">
-            <a href="https://news.bitcoin.com/biggest-movers-sol-surges-8-as-atom-nears-1-month-high/" target="_self">
-            <h6 class="story__title story--medium__title">
-            Biggest Movers: SOL Surges 8%, as ATOM Nears 1-Month High </h6>
-            </a>
-            <div class="story__footer">
-            MARKET UPDATES | <span>3 hours ago</span> </div>
-            </div>
-            </div>
-            </div></div>  </div>
-            </div>
-            <p class="images_credits"><em><b>Image Credits</b>: Shutterstock, Pixabay, Wiki Commons</em></p>
-            <div class="snippet_container"></div>
-            <div id="bn-nav" class="navigation">
-            <div class="nav-box previous">
-            <a href="https://news.bitcoin.com/gold-silver-and-oil-predictions-ellisons-ftx-testimony-and-the-sam-trabucco-mystery-massively-eroded-dollar-sees-the-fed-turn-109-week-in-review/" rel="prev" target="_self"><h3><span class="chevron left"></span> Previous article</h3>Gold, Silver, and Oil Predictions; Ellison’s FTX Testimony and the Sam Trabucco Mystery; Massively Eroded Dollar Sees the Fed Turn 109 — Week in Review</a> </div>
-            <div class="nav-box next">
-            <a href="https://news.bitcoin.com/top-three-macroeconomic-events-to-watch-in-2023-amid-volatile-market-conditions/" rel="next" target="_self"><h3>Next article <span class="chevron right"></span></h3>Top 3 Macroeconomic Events to Watch in 2023 Amid Volatile Market Conditions</a> </div>
-            </div>
-            <div class="disclaimer"><p><strong>Disclaimer</strong>: This article is for informational purposes only. It is not a direct offer or solicitation of an offer to buy or sell, or a recommendation or endorsement of any products, services, or companies. <a href="https://bitcoin.com" target="_blank">Bitcoin.com</a> does not provide investment, tax, legal, or accounting advice. Neither the company nor the author is responsible, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any content, goods or services mentioned in this article.</p>
-            </div>
-            <div class="switch_container">
-            <div class="disclaimer_switch"><span class="mobile_hide">Read </span>disclaimer</div><div class="bn_show_comments" data-start-comment="<span class='mobile_hide'>Click here to </span>comment" data-add-comment="<span class='mobile_hide'>Join the </span>discussion"><span class="mobile_hide">Click here to </span>comment</div> </div>
-            <div class="alm-disqus" id="disqus_thread" data-disqus-shortname="bitcoincom" style="display: none;"><iframe id="dsq-app1534" name="dsq-app1534" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" sandbox="allow-forms allow-popups allow-same-origin allow-scripts" width="100%" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 0px !important;"></iframe><iframe id="dsq-app1531" name="dsq-app1531" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="https://disqus.com/embed/comments/?base=default&amp;f=bitcoincom&amp;t_i=566744%20https%3A%2F%2Fnews.bitcoin.com%2Fglobal-cryptocurrency-trade-volumes-saw-a-significant-decline-in-december-2022%2F&amp;t_u=https%3A%2F%2Fnews.bitcoin.com%2Fglobal-cryptocurrency-trade-volumes-saw-a-significant-decline-in-december-2022%2F&amp;t_d=%0AGlobal%20Cryptocurrency%20Trade%20Volumes%20Saw%20a%20Significant%20Decline%20in%20December%202022%20&amp;t_t=%0AGlobal%20Cryptocurrency%20Trade%20Volumes%20Saw%20a%20Significant%20Decline%20in%20December%202022%20&amp;s_o=default#version=82a72a26efe6cf449a682219560463fd" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 0px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe><iframe id="indicator-north" name="indicator-north" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 0px !important; border: none !important; overflow: hidden !important; top: 0px !important; min-width: 0px !important; max-width: 0px !important; position: fixed !important; z-index: 2147483646 !important; height: 0px !important; min-height: 0px !important; max-height: 0px !important; display: none !important;"></iframe><iframe id="indicator-south" name="indicator-south" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 0px !important; border: none !important; overflow: hidden !important; bottom: 0px !important; min-width: 0px !important; max-width: 0px !important; position: fixed !important; z-index: 2147483646 !important; height: 0px !important; min-height: 0px !important; max-height: 0px !important; display: none !important;"></iframe></div>
-            <script>
-            
-                                    var disqus_config = function () {
-                                        this.page.url = "https://news.bitcoin.com/global-cryptocurrency-trade-volumes-saw-a-significant-decline-in-december-2022/";
-                                        this.page.identifier = "566744" + " "  + "https://news.bitcoin.com/global-cryptocurrency-trade-volumes-saw-a-significant-decline-in-december-2022/";
-                                        this.callbacks.onNewComment = [function(comment) {
-            
-                                            if(globals.post_id){
-                                                window.CT.update_comments_count.init(comment.id, globals.post_id);
-                                            }
-            
-                                        }];
-                                        this.callbacks.onReady = [function()
-                                        {
-                                            jQuery('#disqus_thread').slideUp(500);
-                                            //$('.alm-disqus').attr('style','');
-                                            jQuery('.bn_show_comments ').show();
-            
-                                        }];
-                                    };
-            
-            
-                                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-                                        var d = document, s = d.createElement('script');
-            
-                                        // IMPORTANT: Replace EXAMPLE with your forum shortname!
-                                        s.src = 'https://bitcoincom.disqus.com/embed.js';
-            
-                                        s.setAttribute('data-timestamp', +new Date());
-                                        (d.head || d.body).appendChild(s);
-                                    })();
-                                </script>
-          </article>
+                    
+<p>The last time global cryptocurrency trade volumes were this low was two years ago in December 2020. 
+    At that time, global crypto trade volumes were 7.27% higher at $385.51 billion. 
+    Lower cryptocurrency trade volumes can have both positive and negative implications for investors.</p>
+<p>On one hand, low trade volume is often seen as a sign of a lack of interest in the crypto market, 
+    which could potentially indicate lower values. On the other hand, 
+    low trade volume can sometimes be interpreted as a bullish sign for the cryptocurrency economy,
+     as it may suggest limited selling pressure.</p>
     </div>
+           
+    <br><br>
+    <div class="container">
+
+    <article style="margin-right:10px; margin-left:40px; margin-top:20px;width:80%; height:420px; ">
+        <a href="https://www.investing.com/equities/most-active-stocks?utm_source=google&utm_medium=cpc&utm_campaign=18545756627&utm_content=626940823156&utm_term=dsa-1546555491534_&GL_Ad_ID=626940823156&GL_Campaign_ID=18545756627&gclid=CjwKCAiA5sieBhBnEiwAR9oh2nu3IdnTuQSjwVEz3ddUba0jxvjlU_IOD6sK06rXsjM9WoU-KIO16BoCNBYQAvD_BwE" alt="active stocks">
+          <h1 style="color:rgb(124, 147, 230); " >Most active Stocks-US</h1></a>
+        <article style="width:100%; height: 100px;">
+            <a href="https://www.investing.com/indices/us-spx-500-futures?cid=1175153"><h5>US 500 - <span style="color:green;">33,971,90</span></h5></a>
+              <p>The Standard and Poor's 500,or simply the S&P 500, is a stock market index tracking the stock performance of 500 large companies
+                   listed on stock exchanges in the United States. It is one of the most commonly followed equity indices. </p>
+            
+  
+        </article>
+        <article style="width:100%; height: 100px;">
+            <a href="https://www.investing.com/indices/us-30"><h5>Dow Jones - <span style="color:green;">33,201,80</span> </h5></a>
+            <p>The Dow Jones Industrial Average, Dow Jones, or simply the Dow,is a stock market index of 30 prominent companies
+               listed on stock exchanges in the United States.</p>
+            
+        </article>
+        <article style="width:100%; height: 100px;">
+            <a href="https://www.investing.com/indices/nasdaq-composite"><h5>Nasdaq - <span style="color:green;">11,415,61</span></h5></a>
+            <p>The Nasdaq Stock Market an American stock exchange based in New York City. It is the most active stock trading venue in 
+              the US by volume, behind the New York Stock Exchange.</p>
+            
+        </article>
+      </article>
+    </div>
+  
+    
+
+      
     <footer>
-        <div class="footer-content" style="top: -900px;">
+        <div class="footer-content" >
             <h3>Stock Market</h3>
             <p>Get the latest news about <i>Stock Market</i></p>
             <ul class="socials">
