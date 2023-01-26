@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>STOCK MARKET</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        body{  
+   background-image: url('photos/bc1.jpg');
+     background-size: cover;
+     background-attachment: fixed;  
+     color:#fff;
+   }
+
+   footer{
+  position: absolute;
+   background-color: rgb(0, 0, 0);
+    height: 200px;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top:30px;
+    color: #f2f2f2;}
+   
+    .footer-content{
+      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;}
+   
+    .footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 4000;
+
+    text-transform: capitalize;
+    }
+   
+    .footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;}
+   
+    .socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;}
+   
+    .socials li{
+    margin: 0 10px;}
+   
+    .socials a{
+    text-decoration: none;
+    color: #fff;}
+
+    .socials a i{
+    font-size: 2.1rem;
+    transition: color .4s ease;}
+   
+    .socials a:hover i{
+    color: rgb(70, 116, 149);}
+   
+    .footer-bottom{
+    background: #000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;}
+   
+   
+    .footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;}
+   
+    .footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;}
+    .heading-1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 40px;
+            text-transform: uppercase;
+            color: red;
+            text-shadow: 5px 5px 4px lightcoral;
+        }
+
+        .heading-2 {
+            font-size: 40px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .heading-3 {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: crimson;
+            margin-bottom: 10px;
+        }
+        .sub-heading {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .sub-heading p {
+            font-weight: 700;
+            text-transform: capitalize;
+            margin-right: 10px;
+        }
+
+        .sub-heading span {
+            color: #555;
+            font-weight: 300;
+            border-right: 1px solid #ccc;
+            padding-right: 10px;
+        }
+
+        .sub-heading .important {
+            color: crimson;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+   
+
+
+   </style>
+</head><body>
+       
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="home.html">Stock Market</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="home.html"><i style="font-size: 1.8rem;"class="fas fa-home">Home</i></a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="news.html"><i style="font-size: 1.8rem;"class="fas fa-mail-bulk">Market news </i><span class="caret"></span></a>
+         
+          
+           <ul class="dropdown-menu">
+            <li><a href="news.html">News</a></li>
+            <li class="active"><a href="features.html">Features</a></li>
+            <li><a href="tutorials.html">Tutorials</a></li>
+            
+          </ul>
+        </li>
+       
+        <li><a href="invest.html"><i style="font-size: 1.8rem;" class="fas fa-business-time">Invest</i></a></li>
+        <li><a href="index.html"><i style="font-size: 1.8rem;"class="fas fa-info"> About us</i></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="loginform.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       
+      </ul>
+    </div>
+  </nav>
+
+
+
+  
+  <div class="container">
+    <header>
+
+        <h1 class="heading-1" id="demo2"></h1>
+
+
+        <script>
+            // Create an object:
+            const person = {
+                firstWord: "Stock Market",
+                secondWord: "Features",
+
+            };
+
+            document.getElementById("demo2").innerHTML =
+                person.firstWord + "-" + person.secondWord;
+        </script>
+
+        <div class="sub-heading">
+            <p>Saturday, <span id="demo3"> </span></p>
+
+
+            <script>
+                let x = 3 + " " + "December" + " " + 2022;
+                document.getElementById("demo3").innerHTML = x;
+            </script>
+
+
+            
+        </div>
+    </header>
+
+    
+
+
+
+        <div class="featured_image_container">
+        <img width="350" height="400" src="https://expertoption.finance/img/graphics/features-1@2x.webp"/>
+        <img width="350" height="400" src="https://expertoption.finance/img/graphics/features-2@2x.webp"/>
+        <img width="350" height="400" src="https://expertoption.finance/img/graphics/features-3@2x.webp"/>
+        </div>
+<ul>
+<li>Technical analysis tools: 4 chart types, 8 indicators, trend lines</li>
+<li>Social trading: watch deals across the globe or trade with your friends</li>
+<li>Over 100 assets including popular stocks like Apple, Facebook and McDonald's</li>
+</ul>
+         <p><strong>We provide fastest trading using modern technologies. No delays in order executions and most accurate quotes. Our trading platform is available around the clock and on weekends. 
+            Stock Market customer service is available 24/7. We are continuously adding new financial instruments.</strong></p>
+<div>
+   
+<h1>Instant access to investing, anytime and anywhere</h1>
+<p>Investing has never been easier. Everything you are looking for in an ultimate investment platform — on the device of your choice.</p>
+<img width="850" height="400" style="margin-left: 70px;"src="https://static.cdnroute.io/lp/mobile/svstatic/assets/intro/desktop--new.webp"/>
+
+            <button type="button" class="btn btn-primary btn-lg" style="margin-left: 50px;"onClick="window.location.href='https://app.expertoption.finance/';">Try free demo</button>
+
+            
+
+</div>
+
+<div>
+    <h1>Build your investing foundation</h1>
+    
+    <video width="550"  controls>
+        <source src="tradevideo1.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+      </video>
+      <video width="550"  controls>
+        <source src="tradevideo2.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+      </video>
+      <h5>We all have to start somewhere. Let us help get you on the right track as you start your investing journey. With our video tutorials section you'll be ready to start in no time.</h5>
+<p>Why is the stock market so important to individuals?
+    How do financial markets help me? Financial markets can give an opportunity for you to invest money in shares (also known as equities) to build up money for the future. Over a long period of time, this can often provide a better return than opening a savings account at your bank.What are 3 benefits of stocks?
+    Stocks can be a valuable part of your investment portfolio. Owning stocks in different companies can help you build your savings, protect your money from inflation and taxes, and maximize income from your investments.Without a stock market, purchasing shares directly from a company or selling directly to new investors would be more complex and expensive. Business growth would be more difficult if companies could not have an initial public offering or issue new shares to raise money.</p>
+
+
+
+
+</div>
+<br>
+<br>
+
+
+            <div>
+                <h1>Mobile apps</h1>
+                <h4>Top Finance App in 47 countries</h4>
+                <p>According to the App Store and Google Play ranking</p>
+                <br>
+        
+        <h4>Full featured app</h4>  
+        <p>Providing all trading platform functionality</p>      
+        <br>
+        <h4>Over 10 000 000 installs</h4>
+        <p>Fastest growing mobile trading app</p>
+        <button type="button" class="btn btn-info"><a style="color:white;"href="https://apps.apple.com/us/app/stocks/id1069512882">Download on the App Store</a></button>
+        
+        <button type="button" class="btn btn-danger"><a style="color:white;"href="https://play.google.com/store/apps/details?id=com.savved.uptick&hl=en&gl=US">Get it on Google Play</a></button>
+         </div>
+        <div style="margin-top:-350px; float:right;">
+            <video width="400"  autoplay muted>
+                <source src="application.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+              </video>
+        </div>
+        
+        <div>
+
+
+
+
+
+
+
+            <br><br><br>
+
+           
+
+
+
+            <p>Trade and withdraw your money.
+                We work with more than 20 payment systems. You can transfer money to your debit or credit card: Visa, MasterCard, Maestro, UnionPay. We are integrated with electronic payment methods as well: Neteller, Skrill, Perfect Money, FasaPay and others.
+                Gold, Platinum and Exclusive accounts have priority withdrawal.</p>
+                <img src="https://expertoption.finance/img/graphics/pay-logos.svg"/>
+            </div>
+
+
+
+           
+  </div>
+
+  <div class="container">
+    <h2 style=" color:rgb(29, 29, 112); "><b>What our clients say</b></h2>  
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:400px; height: 250px; margin-left: 300px;" >
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active" style=" align-items: center;">
+          <img src="photos/Klienti1.png" alt="Klienti1" style="width:100%;"/>
+        </div>
+  
+        <div class="item">
+          <img src="photos/Klienti2.png" alt="Klienti2" style="width:100%;"/>
+        </div>
+        <div class="item">
+          <img src="photos/Klienti3.png" alt="Klienti3" style="width:100%;"/>
+        </div>
+      
+        <div class="item">
+          <img src="photos/Klienti4.png" alt="Klienti4" style="width:100%;"/>
+        </div>
+      </div>
+  
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+
+
+    <footer>
+        <div class="footer-content" style="top: -900px;">
+            <h3>Stock Market</h3>
+            <p>Get the latest news about <i>Stock Market</i></p>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="mailto: abc@example.com"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <address>copyright &copy;2023 designed by <span><abbr
+                        title="Fakulteti i Inxhinierise Elektrike dhe Kompjuterike">FIEK</span></abbr></address>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
+
+
