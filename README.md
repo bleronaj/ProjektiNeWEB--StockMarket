@@ -1,2 +1,2 @@
-# team-collaboration
-"Stock market" project
+# Grupi30
+Projekti "Stock market" ne lenden "Programimi ne Web"
