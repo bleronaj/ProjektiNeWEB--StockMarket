@@ -18,7 +18,7 @@
     <style>
          article {
             width: 90%;
-            border: 2px solid rgb(5, 25, 102);
+            border: 2px solid rgb(75, 82, 110);
             padding: 10px;
             border-radius: 10px;
             margin: 0 auto;
@@ -101,13 +101,15 @@
     font-weight: 200;}
     .heading-1 {
             font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 40px;
+            font-size: 50px;
             text-transform: uppercase;
+            
             color: red;
-            text-shadow: 5px 5px 4px lightcoral;
+            text-shadow: 5px 5px 4px rgb(172, 69, 69);
         }
 
         .heading-2 {
+          
             font-size: 40px;
             line-height: 1.1;
             margin-bottom: 20px;
@@ -115,17 +117,19 @@
         }
 
         .heading-3 {
+          
             font-size: 20px;
             text-transform: uppercase;
             color: crimson;
             margin-bottom: 10px;
         }
         .sub-heading {
+          
             font-size: 20px;
             display: flex;
             align-items: center;
             margin-bottom: 30px;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid rgb(77, 102, 150);
             padding-bottom: 10px;
         }
 
@@ -136,7 +140,7 @@
         }
 
         .sub-heading span {
-            color: #555;
+            color: rgb(92, 117, 175);
             font-weight: 300;
             border-right: 1px solid #ccc;
             padding-right: 10px;
@@ -208,9 +212,9 @@
 
         
   <article >
-    <img src="photos/trending.jpg"alt="" width="100%" height="400" />
+    <img src="photos/Report1.png"alt="" width="100%" height="400" />
 
-    <a href="article.html" ><h1 style="color:blue; font-size:xx-large;">R&D: A long-term investment</h1></a> 
+    <a href="article.html" ><h1 style="color:rgb(205, 205, 247); font-size:xx-large;">R&D: A long-term investment</h1></a> 
 
 <p>See why long term investment strategies should factor in research and development.
      A company's R&D strategy may lead to durability and better returns...</p></article><br>
@@ -219,8 +223,9 @@
 <p>Stocks slipped on Friday to end a brutal 2022 with a whimper, as Wall Street wrapped up its worst year since 2008 on a sour note.
 The Dow Jones Industrial Average slid 73.55 points, or 0.22%, to close at 33,147.25. The S&P 500 shed 0.25% to end at 3,839.50. 
     The Nasdaq Composite ticked down 0.11% to 10,466.88.
+    <br><br>
 
-    <img src="photos/stock1.jpg" width="80%" height="400px;" style="margin-left: 100px;"/><br>
+    <img src="photos/stock_market home page image 1.jpeg" width="100%" height="500px;" /><br><br>
     Friday marked the final day of trading in what has been a painful year for stocks. All three of the major averages suffered their worst
      year since 2008 and snapped a three-year win streak.
       The S&P 500 sank 19.4%, and is more than 20% below its record high,
@@ -234,13 +239,13 @@ it is what the Fed is doing,” said Art Cashin, director of floor operations fo
 </p>
 
 <br>
-            <h1 style="margin-left:40px; color:rgb(66, 116, 177);">But how does this actually work? </h1>
-            <p style="margin-left:40px;">Video of 
+            <h1 style="margin-left:40px; color:rgb(74, 110, 154);">But how does this actually work? </h1>
+            <p style="margin-left:45px;">Video of 
                 <a href="https://www.youtube.com/channel/UCejoTyCljURHcX7wdkXGRXA" target="_blank">Faares Q</a>.</p>
 
             <div style="text-align:center"> 
  
-                <video id="video1" width="1000"  >
+                <video id="video1" width="100%"  >
                   <source src="Investt.mp4" type="video/mp4">
                   Your browser does not support HTML video.
                 </video>
@@ -296,9 +301,32 @@ commands $12.45 billion, which equates to 71.63% of the aggregate on Jan. 1, 202
     Cryptocurrency trade volumes have been declining since Jan. 2022, with monthly spikes in May, September, and November 2022.</p>
   
 
-<p><img src="https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly.png"
- width="100%" height="400" srcset="https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-300x157.png 300w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-1024x537.png 1024w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-768x403.png 768w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-1536x806.png 1536w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly-2048x1075.png 2048w, https://static.news.bitcoin.com/wp-content/uploads/2023/01/cryptocurrency-exchange-volume-monthly.png 2401w" sizes="(max-width: 2401px) 100vw, 2401px"></p>
                     
+ <div id="myPlot" style="width:100%; max-height: 400px; margin-top:50px;"></div>
+ <script>
+ var xArray = [2014,2016,2017,2018,2019,2020,2021,2022];
+ var yArray = [0,12000,50000,11000,13000,60000,45000,65000];
+ 
+ // Define Data
+ var data = [{
+   x: xArray,
+   y: yArray,
+   mode:"lines"
+ }];
+ 
+ // Define Layout
+ var layout = {
+   xaxis: {range: [2013, 2023], title: "April 2014 - January 2022"},
+   yaxis: {range: [0, 70000], title: ""},  
+   title: "Cryptocurrency Exchange Volume(The Block Legitimate Index)"
+ };
+ 
+ // Display using Plotly
+ Plotly.newPlot("myPlot", data, layout);
+ </script>
+
+
+
 <p>The November spike occurred amid the chaos surrounding FTX’s insolvency, and there were significantly higher daily trade volumes at that time. 
  Data from The Block’s crypto exchange volume (<a href="https://www.theblock.co/data/crypto-markets/spot/cryptocurrency-exchange-volume-monthly" target="_blank">legitimate index</a>) 
 shows that Oct. 2022 had $543.67 billion in volume, while Nov. 2022 saw an increase of approximately 23.79% to $673.01 billion.
@@ -341,7 +369,7 @@ shows that Oct. 2022 had $543.67 billion in volume, while Nov. 2022 saw an incre
         </article>
       </article>
     </div>
-  
+  <br><br><br>
     
 
       
@@ -358,7 +386,7 @@ shows that Oct. 2022 had $543.67 billion in volume, while Nov. 2022 saw an incre
             </ul>
         </div>
         <div class="footer-bottom">
-            <address>copyright &copy;2023 designed by <span><abbr
+            <address>copyright &copy;2021 designed by <span><abbr
                         title="Fakulteti i Inxhinierise Elektrike dhe Kompjuterike">FIEK</span></abbr></address>
         </div>
     </footer>
