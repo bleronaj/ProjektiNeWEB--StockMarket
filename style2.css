@@ -46,10 +46,10 @@ h2{
     color: wheat;
     font-size: 35px;
 }
-p,li{
+p.p,li{
     color:rgb(160, 100, 100);
     font-size: 20px;
-    line-height: 20px;
+    line-height: 30px;
 }
 
 
@@ -93,69 +93,3 @@ h4{
     text-shadow: 0 0 5px rgb(193, 198, 220)9;
     font-size: 20px;
 }
-footer{
-    position: absolute;
-    background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
-    height: auto;
-    width: 100%;
-    font-family: "Open Sans";
-    padding-top: 40px;
-    color: rgb(126, 126, 126);}
-    
-    .footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;}
-    
-    .footer-content h3{
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    line-height: 3rem;}
-    
-    .footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;}
-    
-    .socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;}
-    
-    .socials li{
-    margin: 0 10px;}
-    
-    .socials a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);}
-
-    .socials a i{
-    font-size: 2.1rem;
-    transition: color .4s ease;}
-    
-    .socials a:hover i{
-    color: rgb(46, 112, 133);}
-    
-    .footer-bottom{
-    background: rgb(0, 0, 8);
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;}
-    
-    
-    .footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;}
-    
-    .footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;}
-    
