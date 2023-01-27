@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <title>Team Section</title>
+     
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <script src="https://kit.fontawesome.com/0f71384898.js" crossorigin="anonymous"></script>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+      
+    
+      
+
+      <style>
+/*
+body{  
+   background-image: url('photos/bc1.jpg');
+     background-size: cover;
+     background-attachment: fixed;  
+   }
+*/
+
+            *{
+  margin: 0px;
+  padding: 0px;
+  font-family: poppins;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  background-color: #000000;
+}
+
+#team{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: auto;
+}
+.team-slider-box{
+  width: 100%;
+  padding: 20px;
+  user-select: none;
+}
+.t-s-img{
+  position: relative;
+  height: 350px;
+}
+.t-s-img::after{
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgb(0, 0, 0) 100%);
+}
+.t-s-img img{
+  filter: grayscale(1);
+  width: 250px;
+  height: 500px;
+  
+  object-fit: contain;
+  object-position: top;
+  display: flex;
+}
+.t-s-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.t-s-text strong,
+.t-s-text a{
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.t-s-text span{
+
+  color: #919191;
+  font-size: 1.2rem;
+}
+.team-social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-social a{
+  margin: 0px 5px;
+  color: #ffffff;
+  transition: all ease 0.3s;
+  font-size: 0.9rem;
+}
+.team-social a:hover{
+  color: #0617ff;
+}
+.swiper {
+  max-width: 745px;
+  width: 100%;
+}
+.team-social a:hover i{
+    color: rgb(110, 131, 157);}
+
+.swiper-slide {
+  max-width: 300px !important;
+  width: 90%;
+  opacity: 0.2;
+  margin: 50px 0px;
+  margin-top: 0px;
+}
+.swiper-slide-active{
+  border: 10px solid #0617ff;
+  opacity: 1;
+}
+.team-heading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 101; }
+.team-heading h3{
+  color: #ffffff;
+  font-size: 3rem;
+ 
+}
+.team-social a i{
+    font-size: 1.8rem;
+    transition: color .4s ease;}
+
+@media(max-width:724px){
+  .team-heading h3{
+      font-size: 2.6rem;
+  }
+}
+@media(max-width:300px){
+  .t-s-img{
+      height: 280px;
+  }
+}
+
+
+
+
+
+:root{
+            --white:#FFF;
+            --black:#000;
+            --dark:#1E1E1E;
+            --gray:rgba(1,1,1,0.6);
+            --lite:rgba(255,255,255,0.6);
+            --primary:#002347;
+            --secondary:#fdc632;
+        }
+        
+        
+        /***************************
+                    DEFAULT
+        ****************************/
+        body{
+            margin:0;
+            overflow-x:hidden !important;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        a{
+            text-decoration:none !important;
+            min-width: fit-content;
+            width: fit-content;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+        }
+        
+        a, button{
+            transition:0.5s;
+        }
+        
+        a, p{
+            font-size:14px;
+        }
+        
+        h1, h2, h3, h4, h5, h6{
+            color:var(--primary);
+            font-weight:600;
+        }
+        
+        a, button, input, textarea, select{
+            outline:none !important;
+        }
+        
+        fieldset{
+            border:0;
+        }
+        
+        .title{
+            color:var(--primary);
+        }
+        
+        .flex, .fixed_flex{
+            display:flex;
+        }
+        
+        .flex-content{
+            width:100%;
+            position:relative;
+        }
+        
+        .padding_1x{
+            padding:1rem;
+        }
+        
+        .padding_2x{
+            padding:2rem;
+        }
+        
+        .padding_3x{
+            padding:3rem;
+        }
+        
+        .padding_4x{
+            padding:4rem;
+        }
+        
+        .btn{
+            padding:0.8rem 2rem;
+            border-radius:5px;
+            text-align:center;
+            font-weight:500;
+            text-transform:uppercase;
+        }
+        
+        .btn_1{
+            border:1px solid var(--primary);
+            background-color:var(--primary);
+            color:var(--secondary);
+        }
+        
+        .btn_1:hover{
+            background-color:transparent;
+            color:var(--primary);
+        }
+        
+        .btn_2{
+            border:1px solid var(--secondary);
+            background-color:var(--secondary);
+            color:var(--primary);
+        }
+        
+        .btn_2:hover{
+            border:1px solid var(--primary);
+            background-color:var(--primary);
+            color:var(--secondary);
+        }
+        
+        @media (max-width:920px){
+            .flex{
+                flex-wrap:wrap;
+            }
+            
+            .padding_1x, .padding_2x, .padding_3x, .padding_4x{
+                padding:1rem;
+            }
+          
+            .btn{
+                padding:0.5rem 1rem;
+            }
+            
+            a, p{
+                font-size:12px;
+            }
+        }
+        
+        
+        
+        /***************************
+                       FOOTER
+        ****************************/
+        footer{
+            background-color:var(--primary);
+            color:var(--lite);
+        }
+        
+        footer h3{
+            color:var(--white);
+            margin-bottom:1.5rem;
+        }
+        
+        footer a{
+            color:var(--lite);
+            display:block;
+            margin:15px 0;
+        }
+        
+        footer a:hover{
+            color:var(--white);
+        }
+        
+        footer fieldset{
+            padding:0;
+        }
+        
+        footer fieldset input{
+            background-color:#334f6c;
+            border:0;
+            color:var(--lite);
+            padding:1rem;
+        }
+        
+        footer fieldset .btn{
+            border-radius:0;
+            border:0;
+        }
+        
+        footer fieldset .btn_2:hover{
+            background-color:var(--secondary);
+            border:0;
+            color:var(--primary);
+        }
+        
+        footer .flex:last-child{
+            align-items:center;
+        }
+        
+        footer .flex:last-child .flex-content:last-child{
+            text-align:right;
+        }
+        
+        footer .flex:last-child p{
+            color:var(--white);
+        }
+        
+        footer .flex:last-child a{
+            width:40px;
+            display:inline-block;
+            background-color:#334f6c;
+            color:var(--white);
+            padding:0.5rem;
+            margin-right:3px;
+            text-align:center;
+        }
+        
+        footer .flex:last-child a:hover{
+            background-color:var(--secondary);
+            color:var(--gray);
+        }
+        
+        @media (max-width:1100px){
+            footer .flex:first-child{
+                flex-wrap:wrap;
+            }
+            
+            footer .flex:first-child .flex-content{
+                flex: 1 1 40%;
+            }
+        }
+
+
+        
+
+
+        
+        @media (max-width:920px){
+            footer .flex:last-child .flex-content:last-child{
+                text-align:left;
+            }
+        }
+        
+        @media (max-width:320px){
+            footer .flex:first-child .flex-content{
+                flex:1 1 100%;
+            }
+        }
+        
+
+
+
+      </style>
+  
+  </head>
+  <body>
+      <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="home.html">Stock Market</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li ><a href="home.html"><i style="font-size: 1.8rem;"class="fas fa-home">Home</i></a></li>
+              <li class="active" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="tutorials.html"><i style="font-size: 1.8rem;"class="fas fa-mail-bulk">Market news </i><span class="caret"></span></a>
+               
+                
+                 <ul class="dropdown-menu">
+                  <li class="active"><a href="tutorials.html">News</a></li>
+                  <li><a href="features.html">Features</a></li>
+                  <li><a href="tutorials.html">Tutorials</a></li>
+                  
+                </ul>
+              </li>
+             
+              <li><a href="invest.html"><i style="font-size: 1.8rem;" class="fas fa-business-time">Invest</i></a></li>
+              <li><a href="index.html"><i style="font-size: 1.8rem;"class="fas fa-info"> About us</i></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="loginform.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+             
+            </ul>
+          </div>
+        </nav>
+
+
+
+
+      
+      <section id="team">
+          <div class="team-heading">
+              <h3>The Team</h3>
+          </div>
+         
+          <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                  
+                  
+                  
+                  <div class="swiper-slide">
+                      
+                      <div class="team-slider-box">
+                      
+                      <div class="t-s-img">
+                          <img alt="team" src="photos/Blerona.12.png"/>
+                      </div>
+                      
+                      <div class="t-s-text">
+                          <strong>Blerona Jashanica</strong>
+                          <span>Chief Executive Officer(CEO)</span>
+                          <br>
+                          <div class="team-social">
+                              <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                              <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                      
+                      <div class="team-slider-box">
+                      
+                      <div class="t-s-img">
+                          <img alt="team" src="photos/Diellza.5.png"/>
+                      </div>
+                  
+                      <div class="t-s-text">
+                          <strong>Diellza Prebreza</strong>
+                          <span>co-CEO</span>
+                          <br>
+                          <div class="team-social">
+                              <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                              <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                     
+                      <div class="team-slider-box">
+                      
+                      <div class="t-s-img">
+                          <img alt="team" src="photos/Aladini.6.png"/>
+                      </div>
+                      
+                      <div class="t-s-text">
+                          <strong>Aladin Bajra</strong>
+                          <span>Co-Founder</span>
+                          <br>
+                      <div class="team-social">
+                          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                          <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                      </div>
+                      </div>
+                      </div>
+                  </div>
+  
+  
+                  
+                  <div class="swiper-slide">
+                      
+                      <div class="team-slider-box">
+                      
+                      <div class="t-s-img">
+                          <img alt="team" src="photos/Endi.3.png"/>
+                      </div>
+                      
+                      <div class="t-s-text">
+                          <strong>Endi Rashica</strong>
+                          <span>Co-Founder</span>
+                          <br>
+                          <div class="team-social">
+                              <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                              <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+
+                  
+                 
+               
+                  <div class="swiper-slide">
+                    
+                      <div class="team-slider-box">
+                    
+                        <div class="t-s-img">
+                          <img alt="team" src="photos/Blina.3.png"/>
+                      </div>
+               
+                      <div class="t-s-text">
+                          <strong>Blina Retkoceri</strong>
+                          <span>Co-Founder</span>
+                          <br>
+                          <div class="team-social">
+                              <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                              <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                
+              </div>
+              
+          </div>
+          
+      </section>
+  
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+      
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 20,
+            stretch: -20,
+            depth: 120,
+            modifier: 3,
+            slideShadows: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
+    
+   
+    
+              
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+ 
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+ 
+ 
+ <footer class="padding_4x">
+   <div class="flex">
+     <section class="flex-content padding_1x">
+       <h3>Stock Market</h3>
+       <a href="home.html">Home</a>
+       <a href="news.html">Market News</a>
+       <a href="index.html">Invest</a>
+       <a href="loginform.html">Log In</a>
+       <a href="signup.html">Sign Up</a>
+     </section>
+
+     <section class="flex-content padding_1x">
+       <h3>Other</h3>
+       <a href="index.html">More Info About Us</a>
+       <a href="tutorials.html">Check The Members Of Our Team</a>
+       
+     </section>
+
+     
+
+     <section class="flex-content padding_1x">
+      <h3>Contact Info</h3>
+      
+        <p>Bregu i Diellit, p.n. 10000 Prishtinë</p>
+        <p>Republika e Kosovës</p>
+      
+        <p class="email-id"> rektorati@uni-pr.edu</p>
+        <p>+383 38 244 183 / 244 186</p>
+     
+     </section>
+
+
+  
+
+     <section class="flex-content padding_1x">
+       <h3>Newsletter</h3>
+       <p>You can trust us. we only send promo offers,</p>
+       <fieldset class="fixed_flex">
+         <input type="email" name="newsletter" placeholder="Your Email Address">
+         <button class="btn btn_2">Subscribe</button>
+       </fieldset>
+     </section>
+   </div>
+   <div class="flex">
+     <section class="flex-content padding_1x">
+       <p>Copyright ©2023 All rights reserved || Stock Market</p>
+     </section>
+
+     <section class="flex-content padding_1x">
+       <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+       <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a>
+       <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+       <a href="https://www.whatsapp.com/"><i class="fa fa-whatsapp"></i></a>
+     </section>
+   </div>
+ </footer>
+  </body>
+
+
+
+</html>
