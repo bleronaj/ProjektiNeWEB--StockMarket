@@ -23,73 +23,224 @@
      color:#fff;
    }
 
-   footer{
-  position: absolute;
-   background-color: rgb(0, 0, 0);
-    height: 200px;
-    width: 100%;
-    font-family: "Open Sans";
-    padding-top:30px;
-    color: #f2f2f2;}
-   
-    .footer-content{
-      
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;}
-   
-    .footer-content h3{
-    font-size: 1.8rem;
-    font-weight: 4000;
-
-    text-transform: capitalize;
-    }
-   
-    .footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;}
-   
-    .socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;}
-   
-    .socials li{
-    margin: 0 10px;}
-   
-    .socials a{
-    text-decoration: none;
-    color: #fff;}
-
-    .socials a i{
-    font-size: 2.1rem;
-    transition: color .4s ease;}
-   
-    .socials a:hover i{
-    color: rgb(70, 116, 149);}
-   
-    .footer-bottom{
-    background: #000;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;}
-   
-   
-    .footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;}
-   
-    .footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;}
+   :root{
+            --white:#FFF;
+            --black:#000;
+            --dark:#1E1E1E;
+            --gray:rgba(1,1,1,0.6);
+            --lite:rgba(255,255,255,0.6);
+            --primary:#002347;
+            --secondary:#fdc632;
+        }
+        body{
+            margin:0;
+            overflow-x:hidden !important;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        a{
+            text-decoration:none !important;
+            min-width: fit-content;
+            width: fit-content;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+        }
+        
+        a, button{
+            transition:0.5s;
+        }
+        
+        a, p{
+            font-size:14px;
+        }
+        
+        h1, h2, h3, h4, h5, h6{
+            color:var(--primary);
+            font-weight:600;
+        }
+        
+        a, button, input, textarea, select{
+            outline:none !important;
+        }
+        
+        fieldset{
+            border:0;
+        }
+        
+        .title{
+            color:var(--primary);
+        }
+        
+        .flex, .fixed_flex{
+            display:flex;
+        }
+        
+        .flex-content{
+            width:100%;
+            position:relative;
+        }
+        
+        .padding_1x{
+            padding:1rem;
+        }
+        
+        .padding_2x{
+            padding:2rem;
+        }
+        
+        .padding_3x{
+            padding:3rem;
+        }
+        
+        .padding_4x{
+            padding:4rem;
+        }
+        
+        .btn{
+            padding:0.8rem 2rem;
+            border-radius:5px;
+            text-align:center;
+            font-weight:500;
+            text-transform:uppercase;
+        }
+        
+        .btn_1{
+            border:1px solid var(--primary);
+            background-color:var(--primary);
+            color:var(--secondary);
+        }
+        
+        .btn_1:hover{
+            background-color:transparent;
+            color:var(--primary);
+        }
+        
+        .btn_2{
+            border:1px solid var(--secondary);
+            background-color:var(--secondary);
+            color:var(--primary);
+        }
+        
+        .btn_2:hover{
+            border:1px solid var(--primary);
+            background-color:var(--primary);
+            color:var(--secondary);
+        }
+        
+        @media (max-width:920px){
+            .flex{
+                flex-wrap:wrap;
+            }
+            
+            .padding_1x, .padding_2x, .padding_3x, .padding_4x{
+                padding:1rem;
+            }
+          
+            .btn{
+                padding:0.5rem 1rem;
+            }
+            
+            a, p{
+                font-size:12px;
+            }
+        }
+        
+        
+        
+        /***************************
+                       FOOTER
+        ****************************/
+        footer{
+            background-color:var(--primary);
+            color:var(--lite);
+        }
+        
+        footer h3{
+            color:var(--white);
+            margin-bottom:1.5rem;
+        }
+        
+        footer a{
+            color:var(--lite);
+            display:block;
+            margin:15px 0;
+        }
+        
+        footer a:hover{
+            color:var(--white);
+        }
+        
+        footer fieldset{
+            padding:0;
+        }
+        
+        footer fieldset input{
+            background-color:#334f6c;
+            border:0;
+            color:var(--lite);
+            padding:1rem;
+        }
+        
+        footer fieldset .btn{
+            border-radius:0;
+            border:0;
+        }
+        
+        footer fieldset .btn_2:hover{
+            background-color:var(--secondary);
+            border:0;
+            color:var(--primary);
+        }
+        
+        footer .flex:last-child{
+            align-items:center;
+        }
+        
+        footer .flex:last-child .flex-content:last-child{
+            text-align:right;
+        }
+        
+        footer .flex:last-child p{
+            color:var(--white);
+        }
+        
+        footer .flex:last-child a{
+            width:40px;
+            display:inline-block;
+            background-color:#334f6c;
+            color:var(--white);
+            padding:0.5rem;
+            margin-right:3px;
+            text-align:center;
+        }
+        
+        footer .flex:last-child a:hover{
+            background-color:var(--secondary);
+            color:var(--gray);
+        }
+        
+        @media (max-width:1100px){
+            footer .flex:first-child{
+                flex-wrap:wrap;
+            }
+            
+            footer .flex:first-child .flex-content{
+                flex: 1 1 40%;
+            }
+        }
+        
+        @media (max-width:920px){
+            footer .flex:last-child .flex-content:last-child{
+                text-align:left;
+            }
+        }
+        
+        @media (max-width:320px){
+            footer .flex:first-child .flex-content{
+                flex:1 1 100%;
+            }
+        }
+        
     .heading-1 {
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 40px;
@@ -229,7 +380,7 @@
    
   <br>
   <br>
-<h1>Instant access to investing, anytime and anywhere</h1>
+<h1 style="color:white;">Instant access to investing, anytime and anywhere</h1>
 <p>Investing has never been easier. Everything you are looking for in an ultimate investment platform — on the device of your choice.</p>
 <img width="850" height="400" style="margin-left: 70px;"src="https://static.cdnroute.io/lp/mobile/svstatic/assets/intro/desktop--new.webp"/>
 
@@ -240,7 +391,7 @@
 </div>
 
 <div>
-    <h1>Build your investing foundation</h1>
+    <h1 style="color:white;">Build your investing foundation</h1>
     
     <video width="550"  controls>
         <source src="tradevideo1.mp4" type="video/mp4">
@@ -250,7 +401,7 @@
         <source src="tradevideo2.mp4" type="video/mp4">
       Your browser does not support HTML video.
       </video>
-      <h5>We all have to start somewhere. Let us help get you on the right track as you start your investing journey. With our video tutorials section you'll be ready to start in no time.</h5>
+      <h5 style="color:white;">We all have to start somewhere. Let us help get you on the right track as you start your investing journey. With our video tutorials section you'll be ready to start in no time.</h5>
 <p>Why is the stock market so important to individuals?
     How do financial markets help me? Financial markets can give an opportunity for you to invest money in shares (also known as equities) to build up money for the future. Over a long period of time, this can often provide a better return than opening a savings account at your bank.What are 3 benefits of stocks?
     Stocks can be a valuable part of your investment portfolio. Owning stocks in different companies can help you build your savings, protect your money from inflation and taxes, and maximize income from your investments.Without a stock market, purchasing shares directly from a company or selling directly to new investors would be more complex and expensive. Business growth would be more difficult if companies could not have an initial public offering or issue new shares to raise money.</p>
@@ -264,15 +415,15 @@
 
 
             <div>
-                <h1>Mobile apps</h1>
-                <h4>Top Finance App in 47 countries</h4>
+                <h1 style="color:white;">Mobile apps</h1>
+                <h4 style="color:white;">Top Finance App in 47 countries</h4>
                 <p>According to the App Store and Google Play ranking</p>
                 <br>
         
-        <h4>Full featured app</h4>  
+        <h4 style="color:white;">Full featured app</h4>  
         <p>Providing all trading platform functionality</p>      
         <br>
-        <h4>Over 10 000 000 installs</h4>
+        <h4 style="color:white;">Over 10 000 000 installs</h4>
         <p>Fastest growing mobile trading app</p>
         <button type="button" class="btn btn-info"><a style="color:white;"href="https://apps.apple.com/us/app/stocks/id1069512882">Download on the App Store</a></button>
         
@@ -340,28 +491,74 @@
 
 
 
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+  
+  
+  <footer class="padding_4x">
+    <div class="flex">
+      <section class="flex-content padding_1x">
+        <h3>Stock Market</h3>
+        <a href="home.html">Home</a>
+        <a href="news.html">Market News</a>
+        <a href="index.html">Invest</a>
+        <a href="loginform.html">Log In</a>
+        <a href="signup.html">Sign Up</a>
+      </section>
+ 
+      <section class="flex-content padding_1x">
+        <h3>Other</h3>
+        <a href="index.html">More Info About Us</a>
+        <a href="tutorials.html">Check The Members Of Our Team</a>
+        
+      </section>
+ 
+      
+ 
+      <section class="flex-content padding_1x">
+       <h3>Contact Info</h3>
+       
+         <p>Bregu i Diellit, p.n. 10000 Prishtinë</p>
+         <p>Republika e Kosovës</p>
+       
+         <p class="email-id"> rektorati@uni-pr.edu</p>
+         <p>+383 38 244 183 / 244 186</p>
+      
+      </section>
+ 
+ 
+   
+ 
+      <section class="flex-content padding_1x">
+        <h3>Newsletter</h3>
+        <p>You can trust us. we only send promo offers,</p>
+        <fieldset class="fixed_flex">
+          <input type="email" name="newsletter" placeholder="Your Email Address">
+          <button class="btn btn_2">Subscribe</button>
+        </fieldset>
+      </section>
+    </div>
+    <div class="flex">
+      <section class="flex-content padding_1x">
+        <p>Copyright ©2023 All rights reserved || Stock Market</p>
+      </section>
+ 
+      <section class="flex-content padding_1x">
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.whatsapp.com/"><i class="fa fa-whatsapp"></i></a>
+      </section>
+    </div>
+  </footer>
 
-    <footer>
-        <div class="footer-content" style="top: -900px;">
-            <h3>Stock Market</h3>
-            <p>Get the latest news about <i>Stock Market</i></p>
-            <ul class="socials">
-                <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="mailto: abc@example.com"><i class="fab fa-google-plus-g"></i></a></li>
-                <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <address>copyright &copy;2023 designed by <span><abbr
-                        title="Fakulteti i Inxhinierise Elektrike dhe Kompjuterike">FIEK</span></abbr></address>
-        </div>
-    </footer>
 </body>
 
 </html>
-
-
 
 
