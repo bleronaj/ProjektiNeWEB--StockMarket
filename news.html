@@ -31,74 +31,234 @@
      background-attachment: fixed;  
      color:#fff;
    }
-       
-   footer{
-  position: absolute;
-   background-color: rgb(0, 0, 0);
-    height: 200px;
-    width: 100%;
-    font-family: "Open Sans";
-    padding-top:30px;
-    color: #f2f2f2;}
    
-    .footer-content{
-      
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;}
    
-    .footer-content h3{
-    font-size: 1.8rem;
-    font-weight: 4000;
 
-    text-transform: capitalize;
+:root{
+    --white:#FFF;
+    --black:#000;
+    --dark:#1E1E1E;
+    --gray:rgba(1,1,1,0.6);
+    --lite:rgba(255,255,255,0.6);
+    --primary:#002347;
+    --secondary:#fdc632;
+}
+
+
+/***************************
+            DEFAULT
+****************************/
+body{
+    margin:0;
+    overflow-x:hidden !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration:none !important;
+    min-width: fit-content;
+    width: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+}
+
+a, button{
+    transition:0.5s;
+}
+
+a, p{
+    font-size:14px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color:var(--primary);
+    font-weight:600;
+}
+
+a, button, input, textarea, select{
+    outline:none !important;
+}
+
+fieldset{
+    border:0;
+}
+
+.title{
+    color:var(--primary);
+}
+
+.flex, .fixed_flex{
+    display:flex;
+}
+
+.flex-content{
+    width:100%;
+    position:relative;
+}
+
+.padding_1x{
+    padding:1rem;
+}
+
+.padding_2x{
+    padding:2rem;
+}
+
+.padding_3x{
+    padding:3rem;
+}
+
+.padding_4x{
+    padding:4rem;
+}
+
+.btn{
+    padding:0.8rem 2rem;
+    border-radius:5px;
+    text-align:center;
+    font-weight:500;
+    text-transform:uppercase;
+}
+
+.btn_1{
+    border:1px solid var(--primary);
+    background-color:var(--primary);
+    color:var(--secondary);
+}
+
+.btn_1:hover{
+    background-color:transparent;
+    color:var(--primary);
+}
+
+.btn_2{
+    border:1px solid var(--secondary);
+    background-color:var(--secondary);
+    color:var(--primary);
+}
+
+.btn_2:hover{
+    border:1px solid var(--primary);
+    background-color:var(--primary);
+    color:var(--secondary);
+}
+
+@media (max-width:920px){
+    .flex{
+        flex-wrap:wrap;
     }
-   
-    .footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;}
-   
-    .socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;}
-   
-    .socials li{
-    margin: 0 10px;}
-   
-    .socials a{
-    text-decoration: none;
-    color: #fff;}
+    
+    .padding_1x, .padding_2x, .padding_3x, .padding_4x{
+        padding:1rem;
+    }
+  
+    .btn{
+        padding:0.5rem 1rem;
+    }
+    
+    a, p{
+        font-size:12px;
+    }
+}
 
-    .socials a i{
-    font-size: 2.1rem;
-    transition: color .4s ease;}
-   
-    .socials a:hover i{
-    color: rgb(55, 140, 135);}
-   
-    .footer-bottom{
-    background: #000;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;}
-   
-   
-    .footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;}
-   
-    .footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;}
+
+
+/***************************
+               FOOTER
+****************************/
+footer{
+    background-color:var(--primary);
+    color:var(--lite);
+}
+
+footer h3{
+    color:var(--white);
+    margin-bottom:1.5rem;
+}
+
+footer a{
+    color:var(--lite);
+    display:block;
+    margin:15px 0;
+}
+
+footer a:hover{
+    color:var(--white);
+}
+
+footer fieldset{
+    padding:0;
+}
+
+footer fieldset input{
+    background-color:#334f6c;
+    border:0;
+    color:var(--lite);
+    padding:1rem;
+}
+
+footer fieldset .btn{
+    border-radius:0;
+    border:0;
+}
+
+footer fieldset .btn_2:hover{
+    background-color:var(--secondary);
+    border:0;
+    color:var(--primary);
+}
+
+footer .flex:last-child{
+    align-items:center;
+}
+
+footer .flex:last-child .flex-content:last-child{
+    text-align:right;
+}
+
+footer .flex:last-child p{
+    color:var(--white);
+}
+
+footer .flex:last-child a{
+    width:40px;
+    display:inline-block;
+    background-color:#334f6c;
+    color:var(--white);
+    padding:0.5rem;
+    margin-right:3px;
+    text-align:center;
+}
+
+footer .flex:last-child a:hover{
+    background-color:var(--secondary);
+    color:var(--gray);
+}
+
+@media (max-width:1100px){
+    footer .flex:first-child{
+        flex-wrap:wrap;
+    }
+    
+    footer .flex:first-child .flex-content{
+        flex: 1 1 40%;
+    }
+}
+
+@media (max-width:920px){
+    footer .flex:last-child .flex-content:last-child{
+        text-align:left;
+    }
+}
+
+@media (max-width:320px){
+    footer .flex:first-child .flex-content{
+        flex:1 1 100%;
+    }
+}
+
+
+
     .heading-1 {
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 50px;
@@ -151,7 +311,8 @@
             text-transform: uppercase;
             font-weight: 300;
         }
-      </style></head>
+      </style>
+      </head>
 
 <body>
    
@@ -219,7 +380,7 @@
 <p>See why long term investment strategies should factor in research and development.
      A company's R&D strategy may lead to durability and better returns...</p></article><br>
 
-<h2>Stocks fall to end Wall Street’s worst year since 2008, S&P 500 finishes 2022 down nearly 20%</h2>
+<h2 style="color:white;">Stocks fall to end Wall Street’s worst year since 2008, S&P 500 finishes 2022 down nearly 20%</h2>
 <p>Stocks slipped on Friday to end a brutal 2022 with a whimper, as Wall Street wrapped up its worst year since 2008 on a sour note.
 The Dow Jones Industrial Average slid 73.55 points, or 0.22%, to close at 33,147.25. The S&P 500 shed 0.25% to end at 3,839.50. 
     The Nasdaq Composite ticked down 0.11% to 10,466.88.
@@ -283,7 +444,7 @@ it is what the Fed is doing,” said Art Cashin, director of floor operations fo
               <br>
 
 
-              <h2>Crypto Trade Volumes End 2022 46% Lower Than the Month Prior</h2>
+              <h2 style="color:white;">Crypto Trade Volumes End 2022 46% Lower Than the Month Prior</h2>
 
               <p>Cryptocurrency trade volumes worldwide have significantly declined since the beginning of the year. 
                   For example, on Jan. 2, 2022, one year ago, the global trade volume for the 24-hour period was approximately 
@@ -349,20 +510,20 @@ shows that Oct. 2022 had $543.67 billion in volume, while Nov. 2022 saw an incre
         <a href="https://www.investing.com/equities/most-active-stocks?utm_source=google&utm_medium=cpc&utm_campaign=18545756627&utm_content=626940823156&utm_term=dsa-1546555491534_&GL_Ad_ID=626940823156&GL_Campaign_ID=18545756627&gclid=CjwKCAiA5sieBhBnEiwAR9oh2nu3IdnTuQSjwVEz3ddUba0jxvjlU_IOD6sK06rXsjM9WoU-KIO16BoCNBYQAvD_BwE" alt="active stocks">
           <h1 style="color:rgb(124, 147, 230); " >Most active Stocks-US</h1></a>
         <article style="width:100%; height: 100px;">
-            <a href="https://www.investing.com/indices/us-spx-500-futures?cid=1175153"><h5>US 500 - <span style="color:green;">33,971,90</span></h5></a>
+            <a href="https://www.investing.com/indices/us-spx-500-futures?cid=1175153"><h5 style="color:white;">US 500 - <span style="color:green;">33,971,90</span></h5></a>
               <p>The Standard and Poor's 500,or simply the S&P 500, is a stock market index tracking the stock performance of 500 large companies
                    listed on stock exchanges in the United States. It is one of the most commonly followed equity indices. </p>
             
   
         </article>
         <article style="width:100%; height: 100px;">
-            <a href="https://www.investing.com/indices/us-30"><h5>Dow Jones - <span style="color:green;">33,201,80</span> </h5></a>
+            <a href="https://www.investing.com/indices/us-30"><h5 style="color:white;">Dow Jones - <span style="color:green;">33,201,80</span> </h5></a>
             <p>The Dow Jones Industrial Average, Dow Jones, or simply the Dow,is a stock market index of 30 prominent companies
                listed on stock exchanges in the United States.</p>
             
         </article>
         <article style="width:100%; height: 100px;">
-            <a href="https://www.investing.com/indices/nasdaq-composite"><h5>Nasdaq - <span style="color:green;">11,415,61</span></h5></a>
+            <a href="https://www.investing.com/indices/nasdaq-composite"><h5 style="color:white;">Nasdaq - <span style="color:green;">11,415,61</span></h5></a>
             <p>The Nasdaq Stock Market an American stock exchange based in New York City. It is the most active stock trading venue in 
               the US by volume, behind the New York Stock Exchange.</p>
             
@@ -373,23 +534,73 @@ shows that Oct. 2022 had $543.67 billion in volume, while Nov. 2022 saw an incre
     
 
       
-    <footer>
-        <div class="footer-content" >
-            <h3>Stock Market</h3>
-            <p>Get the latest news about <i>Stock Market</i></p>
-            <ul class="socials">
-                <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="mailto: abc@example.com"><i class="fab fa-google-plus-g"></i></a></li>
-                <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <address>copyright &copy;2021 designed by <span><abbr
-                        title="Fakulteti i Inxhinierise Elektrike dhe Kompjuterike">FIEK</span></abbr></address>
-        </div>
-    </footer>
-</body>
+    
+       
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+ 
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+ 
+ 
+ <footer class="padding_4x">
+   <div class="flex">
+     <section class="flex-content padding_1x">
+       <h3>Stock Market</h3>
+       <a href="home.html">Home</a>
+       <a href="news.html">Market News</a>
+       <a href="index.html">Invest</a>
+       <a href="loginform.html">Log In</a>
+       <a href="signup.html">Sign Up</a>
+     </section>
 
+     <section class="flex-content padding_1x">
+       <h3>Other</h3>
+       <a href="index.html">More Info About Us</a>
+       <a href="tutorials.html">Check The Members Of Our Team</a>
+       
+     </section>
+
+     
+
+     <section class="flex-content padding_1x">
+      <h3>Contact Info</h3>
+      
+        <p>Bregu i Diellit, p.n. 10000 Prishtinë</p>
+        <p>Republika e Kosovës</p>
+      
+        <p class="email-id"> rektorati@uni-pr.edu</p>
+        <p>+383 38 244 183 / 244 186</p>
+     
+     </section>
+
+
+  
+
+     <section class="flex-content padding_1x">
+       <h3>Newsletter</h3>
+       <p>You can trust us. we only send promo offers,</p>
+       <fieldset class="fixed_flex">
+         <input type="email" name="newsletter" placeholder="Your Email Address">
+         <button class="btn btn_2">Subscribe</button>
+       </fieldset>
+     </section>
+   </div>
+   <div class="flex">
+     <section class="flex-content padding_1x">
+       <p>Copyright ©2023 All rights reserved || Stock Market</p>
+     </section>
+
+     <section class="flex-content padding_1x">
+       <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+       <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a>
+       <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+       <a href="https://www.whatsapp.com/"><i class="fa fa-whatsapp"></i></a>
+     </section>
+   </div>
+ </footer>
+
+
+</body>
 </html>
